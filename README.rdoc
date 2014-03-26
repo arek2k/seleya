@@ -1,0 +1,8 @@
+= Seleya
+
+Yet another simple CMS powered by RubyOnRails, inspired by Locomotive
+
+
+== Description
+
+This project is currently under construction
