@@ -1,6 +1,4 @@
-class Cms::IndexController < ApplicationController
-
-        before_filter :authenticate_user!
+class Cms::IndexController < Cms::BaseController
 
         def index
 
