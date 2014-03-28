@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require icheck.min
-//= require_tree .

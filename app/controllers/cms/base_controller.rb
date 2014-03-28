@@ -1,6 +1,7 @@
 class Cms::BaseController < ApplicationController
 
-        before_filter :authenticate_user!
+  layout 'cms'
+  before_filter :authenticate_user!
 
-	
+
 end
