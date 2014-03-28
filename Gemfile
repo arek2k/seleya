@@ -7,7 +7,8 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', :git => 'https://github.com/zakelfassi/sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -49,3 +50,4 @@ gem 'mysql2', '~> 0.3.15'
 gem 'devise', '~> 3.2.4'
 gem 'cancan', '~> 1.6.10'
 gem 'liquid', '~> 2.6.1'
+gem 'bootflat-rails', '~> 0.1.3'

@@ -8,10 +8,14 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="alert alert-warning"><%= notice %></p>
+<p class="alert alert-danger"><%= alert %></p>
 
-
+<div class="row">
+	<div class="col-md-6">
+		<div class="alert alert-success">It Works !</div>
+	</div>
+</div>
 <%= yield %>
 
 </body>
