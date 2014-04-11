@@ -9,5 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootflat
+ *= require rails_bootstrap_forms
  *= require_self
  */
+
+.vertical-center {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
