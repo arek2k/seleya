@@ -9,7 +9,7 @@
 <div class="col-md-6">
   <h2>Sign in</h2>
 
-  <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= semantic_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div><%= f.email_field :email, autofocus: true %></div>
 
     <div><%= f.password_field :password, autocomplete: "off" %></div>
