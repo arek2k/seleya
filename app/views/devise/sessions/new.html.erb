@@ -14,7 +14,7 @@
     <%= f.inputs do %>
       <%= f.input :email, :required => false, :hint => 'Enter your email address' %>
       <%= f.input :password, :hint => 'Enter password' %>
-      <% if devise_mapping.rememberable? %>
+      <%- if devise_mapping.rememberable? %>
         <%= f.label :remember_me %>
         <%= f.check_box :remember_me %>
       <% end -%>
