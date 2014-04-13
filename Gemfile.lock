@@ -36,7 +36,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    atomic (1.1.16)
     bcrypt (3.1.7)
     bootflat-rails (0.1.9)
       bootstrap-sass (~> 3.1)
@@ -61,7 +60,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
-    formtastic (2.2.1)
+    formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
     formtastic-bootstrap (3.0.0)
       formtastic (>= 2.2)
@@ -122,13 +121,12 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.19.1)
-    thread_safe (0.3.1)
-      atomic (>= 1.1.7, < 2)
+    thread_safe (0.3.3)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.1)
+    turbolinks (2.2.2)
       coffee-rails
     tzinfo (0.3.39)
     uglifier (2.5.0)
@@ -146,6 +144,7 @@ DEPENDENCIES
   cancan (~> 1.6.10)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)
+  formtastic (~> 2.3.0.rc3)
   formtastic-bootstrap (~> 3.0.0)
   jbuilder (~> 1.2)
   jquery-rails
