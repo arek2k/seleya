@@ -1,7 +1,5 @@
-<div class="col-md-6 text-center">
-  <div class="row hidden-xs">
-    <div style="margin-top: 20px;"></div>
-  </div>
+<div class="col-md-6 text-center hidden-xs">
+  <div class="margin-top"></div>
   <div class="alert alert-success"><h3><%= Rails.application.config.system_name %></h3></div>
 </div>
 
@@ -10,16 +8,17 @@
   <h2>Sign in</h2>
 
   <%= semantic_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
     <%= f.semantic_errors %>
     <%= f.inputs do %>
-      <%= f.input :email, :required => false, :hint => 'Enter your email address' %>
+      <%= f.input :email, :hint => 'Enter your email address' %>
       <%= f.input :password, :hint => 'Enter password' %>
       <%- if devise_mapping.rememberable? %>
         <%= f.label :remember_me %>
         <%= f.check_box :remember_me %>
       <% end -%>
       <%= f.actions do %>
-       <%= f.action :submit, :as => :button, :label => 'Sign in', :class => 'primary' %>
+        <%= f.action :submit, :as => :button, :label => 'Sign in', :button_html => { :class => 'btn btn-primary' } %>
       <% end %>
     <% end %>
   <% end %>

@@ -11,3 +11,7 @@
  *= require bootflat
  *= require_self
  */
+
+.margin-top {
+	margin-top: 20px;
+}
