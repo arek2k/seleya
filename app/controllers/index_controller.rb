@@ -1,7 +1,3 @@
-class IndexController < ApplicationController
+class IndexController < ApplicationRouter
       
-  def router
-    render :text => 'Router engine'
-  end
-
 end
