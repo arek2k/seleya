@@ -7,7 +7,7 @@ Seleya::Application.routes.draw do
     get "/" => "index#index", :as => "index"
   end
 
-  root "index#router"
-  get '/*link', to: 'index#router'
+  root "index#index"
+  get '/*link', to: 'index#index'
 
 end
