@@ -1,31 +1,23 @@
 class Cms::ApplicationRouter < ApplicationController
-      
+  include Cms::Router
+
   def index
 
-    uri = params[:link].split('/') unless params[:link].nil?
+    route, args = get_route
 
-    if uri.nil?
-      render text: 'main_page' 
-      return
-    end
-
-    page = ::Page.find_by route: uri.first
+    page = ::Page.find_by route: route
     
-    if valid?(uri, page)
-      render text: 'ok'
+    if valid?(route, page)
+      render text: 'render page'
     elsif
-      # raise 404
-      render text: '404'
+      raise ActionController::RoutingError.new('404') 
     end
-
-
 
   end
 
   private
-  def valid?(uri, page)
-    # count, create uri object etc ...
-    render text: uri.inspect
+  def valid?(route, page)
+    return false if page.nil? || route != page.route
     true
   end
 
