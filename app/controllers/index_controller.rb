@@ -1,3 +1,3 @@
-class IndexController < Cms::ApplicationRouter
-      
+class IndexController < Cms::Dispatcher
+
 end
