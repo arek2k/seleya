@@ -3,7 +3,7 @@ module Cms::Router
   @@route = nil
   @@args = nil
 
-  def get_route
+  def get_route!
     path = URI(request.original_url).path.split('/')
     if path.empty?
       @@route = '/'

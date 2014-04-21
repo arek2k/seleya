@@ -1,7 +1,7 @@
 class Cms::BaseController < ApplicationController
 
   layout 'cms'
-  before_filter :authenticate_admin!
+  before_action :authenticate_admin!
 
 
 end
