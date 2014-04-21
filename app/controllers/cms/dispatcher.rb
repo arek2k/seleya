@@ -2,11 +2,11 @@ class Cms::Dispatcher < ApplicationController
 
   @page = nil
 
-  def index
+  def index # dispatch
 
     @page = ::Page.find_by route: @@route
     
-    if valid?(@@route, @page)
+    if valid?
       render text: 'render page'
     elsif
       raise ActionController::RoutingError.new('404') 

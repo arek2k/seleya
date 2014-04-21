@@ -11,19 +11,19 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<div class="row">
-				</div>
-				<div class="row">
 
 					<% unless notice.nil? %>
-						<p class="col-md-8 col-md-offset-2 alert alert-warning"><%= notice %></p>
+    				<div class="row">
+		  				<p class="col-md-8 col-md-offset-2 alert alert-warning marin-top-1"><%= notice %></p>
+            </div>
 					<% end %>
 
 					<% unless alert.nil? %>
-						<p class="col-md-8 col-md-offset-2 alert alert-danger"><%= alert %></p>
+				    <div class="row">
+						  <p class="col-md-8 col-md-offset-2 alert alert-danger margin-top-1"><%= alert %></p>
+            </div>
 					<% end %>
 
-				</div> 
 				<div class="row">
 					<%= yield %>
 				</div>
