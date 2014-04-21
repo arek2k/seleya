@@ -4,7 +4,7 @@ class Cms::Dispatcher < ApplicationController
 
   def index # dispatch
 
-    @page = ::Page.find_by route: @@route
+    @page = Cms::Page.find_by route: @@route
     
     if valid?
       render text: 'render page'
@@ -14,10 +14,14 @@ class Cms::Dispatcher < ApplicationController
 
   end
 
-  private
+private
+
   def valid?
     return false if @page.nil? || @@route != @page.route
     true
+  end
+
+  def render_page
   end
 
 end

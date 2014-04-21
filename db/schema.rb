@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418121836) do
+ActiveRecord::Schema.define(version: 20140421173058) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -31,19 +31,20 @@ ActiveRecord::Schema.define(version: 20140418121836) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
-  create_table "pages", force: true do |t|
+  create_table "cms_pages", force: true do |t|
     t.string   "route"
     t.string   "title"
     t.text     "description"
     t.boolean  "enabled"
+    t.boolean  "static"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pages", ["route"], name: "index_pages_on_route", unique: true, using: :btree
-  add_index "pages", ["title"], name: "index_pages_on_title", using: :btree
-  add_index "pages", ["user_id"], name: "index_pages_on_user_id", using: :btree
+  add_index "cms_pages", ["route"], name: "index_cms_pages_on_route", unique: true, using: :btree
+  add_index "cms_pages", ["title"], name: "index_cms_pages_on_title", using: :btree
+  add_index "cms_pages", ["user_id"], name: "index_cms_pages_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
