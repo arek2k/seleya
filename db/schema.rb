@@ -13,6 +13,21 @@
 
 ActiveRecord::Schema.define(version: 20140423105610) do
 
+  create_table "cms_pages", force: true do |t|
+    t.string   "route"
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "enabled"
+    t.boolean  "static"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cms_pages", ["route"], name: "index_cms_pages_on_route", unique: true, using: :btree
+  add_index "cms_pages", ["title"], name: "index_cms_pages_on_title", using: :btree
+  add_index "cms_pages", ["user_id"], name: "index_cms_pages_on_user_id", using: :btree
+
   create_table "cms_users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
