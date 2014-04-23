@@ -1,8 +1,7 @@
 Seleya::Application.routes.draw do
 
-  devise_for :users
-  devise_for :admins
 
+  devise_for :users, class_name: 'Cms::User'
   namespace :cms do
     get '/' => 'index#index', :as => 'index'
   end
