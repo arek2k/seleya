@@ -1,13 +1,16 @@
 class Cms::Dispatcher < ApplicationController
+  include Cms::Router
+  #include Cms::Renderer
 
-  @page = nil
+  before_action :get_route!
 
   def index # dispatch
 
     @page = Cms::Page.find_by route: @@route
     
     if valid?
-      render text: 'render page'
+      template = @page.content.template
+      render text: Liquid::Template.parse(template).render
     elsif
       raise ActionController::RoutingError.new('404') 
     end
