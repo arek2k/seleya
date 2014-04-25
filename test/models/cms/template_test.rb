@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Cms::ContentTest < ActiveSupport::TestCase
+class Cms::TemplateTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
