@@ -19,7 +19,7 @@ module Cms::Router
   end
 
   def valid?(page)
-    return false if page.nil? || @@route != page.route
+    return false if page.nil? or @@route != page.route or not page.enabled
     true
   end
 
