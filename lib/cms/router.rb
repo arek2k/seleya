@@ -5,17 +5,12 @@ module Cms::Router
 
   def route!
     path = URI(request.original_url).path.split('/')
-    if path.empty?
-      @@route = '/'
-      return
-    end
 
-    if path[2..-1].empty?
-      @@route = path.second
-      return
+    case 
+    when path.empty? then @@route = '/'
+    when path[2..-1].empty? then @@route = path.second
+    else @@route, @@args = path.second, path[2..-1]
     end
-  
-    @@route, @@args = path.second, path[2..-1]
   end
 
   def valid?(page)
