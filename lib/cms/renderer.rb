@@ -10,9 +10,10 @@ module Cms::Renderer
     raise ActionController::RoutingError.new('500') unless page_layout.include? '{{ yield }}'
     page_layout.sub!('{{ yield }}', page_template)
 
-    ### TODO sections
-
-    render layout: 'cms_frontend', text: Liquid::Template.parse(page_layout).render
+    parts = Hash.new
+    page.sections.each { |s| parts["section_#{s.id}"] = s.content }
+   
+    render layout: 'cms_frontend', text: Liquid::Template.parse(page_layout).render(parts)
   end
 
 end
