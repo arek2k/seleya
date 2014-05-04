@@ -11,7 +11,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<div class="row">
+				<div class="row margin-top-1">
 
 					<% unless notice.nil? %>
 						<p class="col-md-8 col-md-offset-2 alert alert-warning"><%= notice %></p>
@@ -23,7 +23,7 @@
 
 				</div> 
 				<div class="row">
-					MENU CMS
+					<%= render 'layouts/cms_menu' %>
 				</div>
 				<div class="row">
 					<%= yield %>

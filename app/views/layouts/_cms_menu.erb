@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+
+    <div class="navbar-header col-md-3">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+      </button>
+<!--  <img class="img-responsive" src="logo" style="margin-top: 10px; float: left; margin-right: 10px;" alt="logo" />   -->
+      <%= link_to Rails.application.config.system_name, { controller: 'index', action: 'index' }, class: 'navbar-brand' %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><span class="glyphicon glyphicon-pencil"></span> <b>link 123</b></a></li>
+      </ul>
+    </div>
+
+
+  </div>
+</nav>
