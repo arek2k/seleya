@@ -1,10 +1,10 @@
-class Cms::Dispatcher < ApplicationController
+class Cms::DispatcherController < ApplicationController
   include Cms::Router
   include Cms::Renderer
 
   before_action :route!
 
-  def index # dispatch
+  def index # dispatch action
 
     page = Cms::Page.find_by route: @@route
 
