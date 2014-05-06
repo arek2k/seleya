@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/zakelfassi/bootflat-rails
-  revision: dc0e75bc795866b36e2f7b0deccd56a4e51f0562
-  specs:
-    bootflat-rails (0.1.9)
-      bootstrap-sass (~> 3.1)
-      jquery-rails (~> 3.1)
-      sass (~> 3.3)
-
-GIT
   remote: https://github.com/zakelfassi/sass-rails
   revision: 0d4013878dd18440c98da4ffa62208e7700f2477
   specs:
@@ -46,10 +37,14 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     bcrypt (3.1.7)
+    bootflat-rails (0.1.9)
+      bootstrap-sass (~> 3.1)
+      jquery-rails (~> 3.1)
+      sass (~> 3.3)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
-    cancan (1.6.10)
+    cancancan (1.7.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -69,6 +64,8 @@ GEM
       actionpack (>= 3.0)
     formtastic-bootstrap (3.0.0)
       formtastic (>= 2.2)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -145,12 +142,13 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.2)
-  bootflat-rails!
-  cancan (~> 1.6.10)
+  bootflat-rails (~> 0.1.9)
+  cancancan (~> 1.7.1)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)
   formtastic (~> 2.3.0.rc3)
   formtastic-bootstrap (~> 3.0.0)
+  haml (~> 4.0.5)
   jbuilder (~> 1.2)
   jquery-rails
   liquid (~> 2.6.1)
