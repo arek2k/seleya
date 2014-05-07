@@ -1,8 +1,11 @@
 .row
   .col-md-10.col-md-offset-1
     %h3 Add new page
-    .col-md-5
-      = semantic_form_for(@page, :url => cms_pages_path) do |f|
-        = f.inputs
-        = f.actions do
-          = f.action :submit, :as => :button, :label => 'Save page', :button_html => { :class => 'btn btn-primary' }
+    .row
+      .col-md-6.col-md-offset-3
+        = semantic_form_for(@page, :url => cms_pages_path) do |f|
+          - f.semantic_errors
+          = f.inputs do
+            = f.input :layout, :member_label => :name, :as => :radio
+          = f.actions do
+            = f.action :submit, :as => :button, :label => 'Save page', :button_html => { :class => 'btn btn-primary' }

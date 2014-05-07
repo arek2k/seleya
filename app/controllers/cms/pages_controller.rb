@@ -4,7 +4,7 @@ class Cms::PagesController < Cms::BaseController
   end
 
   def new
-    @page = Page.new
+    @page = Cms::Page.new
   end
 
   def create
