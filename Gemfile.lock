@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/zakelfassi/Bootflat-Rails
+  revision: 2aa6b49522084a9ab8b94a7d8ca0905d6fa53122
+  specs:
+    bootflat-rails (0.1.10)
+      bootstrap-sass (~> 3.1)
+      jquery-rails (~> 3.1)
+      sass (~> 3.3)
+
+GIT
   remote: https://github.com/zakelfassi/sass-rails
   revision: 0d4013878dd18440c98da4ffa62208e7700f2477
   specs:
@@ -37,10 +46,6 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     bcrypt (3.1.7)
-    bootflat-rails (0.1.9)
-      bootstrap-sass (~> 3.1)
-      jquery-rails (~> 3.1)
-      sass (~> 3.3)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
@@ -82,7 +87,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
-    multi_json (1.9.2)
+    multi_json (1.10.0)
     mysql2 (0.3.15)
     orm_adapter (0.5.0)
     polyglot (0.3.4)
@@ -106,7 +111,7 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
-    sass (3.3.5)
+    sass (3.3.7)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -142,7 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.2)
-  bootflat-rails (~> 0.1.9)
+  bootflat-rails!
   cancancan (~> 1.7.1)
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)

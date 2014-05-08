@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507075702) do
+ActiveRecord::Schema.define(version: 20140508075017) do
 
   create_table "cms_layouts", force: true do |t|
     t.string   "name"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20140507075702) do
   end
 
   create_table "cms_pages", force: true do |t|
+    t.string   "name"
     t.string   "route"
     t.string   "title"
+    t.text     "keywords"
     t.text     "description"
     t.boolean  "enabled"
     t.boolean  "static"
@@ -33,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140507075702) do
   end
 
   add_index "cms_pages", ["layout_id"], name: "index_cms_pages_on_layout_id", using: :btree
+  add_index "cms_pages", ["name"], name: "index_cms_pages_on_name", using: :btree
   add_index "cms_pages", ["route"], name: "index_cms_pages_on_route", unique: true, using: :btree
   add_index "cms_pages", ["title"], name: "index_cms_pages_on_title", using: :btree
   add_index "cms_pages", ["user_id"], name: "index_cms_pages_on_user_id", using: :btree
