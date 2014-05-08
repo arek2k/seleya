@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require icheck.min
 //= require bootflat_icheck
+//= require bootstrap

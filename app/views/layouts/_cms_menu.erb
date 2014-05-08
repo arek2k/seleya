@@ -6,17 +6,27 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
       </button>
-<!--  <img class="img-responsive" src="logo" style="margin-top: 10px; float: left; margin-right: 10px;" alt="logo" />   -->
+      <!--  <img class="img-responsive" src="logo" style="margin-top: 10px; float: left; margin-right: 10px;" alt="logo" />   -->
       <%= link_to Rails.application.config.system_name, { controller: 'index', action: 'index' }, class: 'navbar-brand' %>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
-        <li>
-        <%= link_to 'Pages', cms_pages_path %>
-        <!--        <a href="index.html"><span class="glyphicon glyphicon-pencil"></span> <b>link 123</b></a> -->
+
+        <!-- pages dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-file"></span> <b>Pages </b> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">CMS pages</li>
+            <li><%= link_to '<span class="glyphicon glyphicon-list"></span> List of pages'.html_safe, cms_pages_path %></li>
+            <li><%= link_to '<span class="glyphicon glyphicon-plus"></span> Add page'.html_safe, new_cms_page_path %></li>
+            <!--  <li class="divider"></li>  -->
+          </ul>
         </li>
-        <li><a href="index.html"><span class="glyphicon glyphicon-pencil"></span> <b>link 123</b></a></li>
+        <!-- / pages dropdown -->
+
       </ul>
     </div>
 
