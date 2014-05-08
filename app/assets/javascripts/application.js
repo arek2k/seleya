@@ -16,3 +16,4 @@
 //= require icheck.min
 //= require bootflat_icheck
 //= require bootstrap
+//= require wice_grid

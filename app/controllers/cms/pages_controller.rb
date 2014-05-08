@@ -1,6 +1,7 @@
 class Cms::PagesController < Cms::BaseController
 
   def index
+    @grid = initialize_grid(Cms::Page)
   end
 
   def new

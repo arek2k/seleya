@@ -1,0 +1,22 @@
+<%= grid(@grid) do |g|
+
+  g.column name: 'ID' do |p| 
+    p.id
+  end
+  g.column name: 'Name' do |p|
+    p.name[0..100]
+  end
+  g.column name: 'Route' do |p| 
+    p.route[0..100]
+  end
+  g.column name: 'Title' do |p| 
+    p.title[0..100]
+  end
+  g.column name: 'Enabled ?' do |p| 
+    p.enabled ? 'Yes' : 'No'
+  end
+  g.column name: 'Static ?' do |p| 
+    p.static ? 'Yes' : 'No'
+  end
+
+end -%>
