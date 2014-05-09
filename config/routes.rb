@@ -5,6 +5,7 @@ Seleya::Application.routes.draw do
   namespace :cms do
     get '/' => 'index#index', :as => 'index'
     resources :pages
+    resources :templates
   end
 
   root 'index#index'
