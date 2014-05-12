@@ -3,20 +3,29 @@
   g.column name: 'ID' do |p| 
     p.id
   end
-  g.column name: 'Name' do |p|
+
+  g.column name: 'Name', attribute: 'name' do |p|
     p.name[0..100]
   end
-  g.column name: 'Route' do |p| 
+
+  g.column name: 'Route', attribute: 'route' do |p| 
     p.route[0..100]
   end
-  g.column name: 'Title' do |p| 
+
+  g.column name: 'Title', attribute: 'title' do |p| 
     p.title[0..100]
   end
+
   g.column name: 'Enabled ?' do |p| 
     p.enabled ? 'Yes' : 'No'
   end
+
   g.column name: 'Static ?' do |p| 
     p.static ? 'Yes' : 'No'
+  end
+  
+  g.column do |p| 
+    button_to 'Edit page', edit_cms_page_path(p), :class => 'btn btn-primary', :method => :get
   end
 
 end -%>
