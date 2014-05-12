@@ -9,8 +9,8 @@ module Cms::Renderer
     @title = page.title
     @description = page.description
     
-    page_template = page.template.content
     page_layout = page.layout.content
+    page_template = page.template.content
 
     template_regexp = Regexp.new("{{\s*template\s*}}")
     unless page_layout =~ template_regexp
@@ -21,8 +21,8 @@ module Cms::Renderer
     parts = Hash.new
     page.sections.each { |s| parts["section_#{s.id}"] = s.content }
    
-    render layout: 'cms_frontend', \
-      text: Liquid::Template.parse(page_layout).render(parts)
+    render layout: 'cms_frontend', text: Liquid::Template
+      .parse(page_layout).render(parts)
   end
 
 end
