@@ -6,14 +6,15 @@ class Cms::PagesController < Cms::BaseController
 
   def new
     @page = Cms::Page.new
+    @sections = Cms::Section.new
+    @template = Cms::Template.new
   end
 
   def create
     page = Cms::Page.new(page_params)
     page.user_id = current_user.id
     page.save
-    redirect_to new_cms_template_path if page.static
-    render text: 'TODO' if not page.static
+    redirect_to cms_pages_path
   end
 
   def show
