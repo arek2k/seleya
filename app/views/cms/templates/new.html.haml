@@ -1,0 +1,12 @@
+.row
+  .col-md-10.col-md-offset-1
+    %h3 Add new template
+    .row
+      .col-md-6.col-md-offset-3
+        = semantic_form_for(@template, :url => cms_pages_path) do |f|
+          - f.semantic_errors
+          = f.inputs :name => 'Template' do
+            = f.input :page, :member_label => :name, :as => :select, :input_html => { :readonly => true }
+            = f.input :content
+          = f.actions do
+            = f.action :submit, :as => :button, :label => 'Save template', :button_html => { class: 'btn btn-primary' }

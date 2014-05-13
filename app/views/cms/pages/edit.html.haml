@@ -5,7 +5,7 @@
       .col-md-6.col-md-offset-3
         = semantic_form_for(@page, :url => cms_page_path) do |f|
           - f.semantic_errors
-          = f.inputs :name => 'Page', :id => :form_part_1 do
+          = f.inputs :name => 'Page' do
             = f.input :name
             = f.input :layout, :member_label => :name, :as => :radio
             = f.input :route
