@@ -1,0 +1,11 @@
+en:
+  devise:
+    views:
+      sign_up: 'Sign up'
+      sign_in: 'Sign in'
+      e_mail: 'E-mail'
+      e_mail_hint: 'Enter your email address'
+      password: 'Password'
+      password_hint: 'Enter password'
+      password_confirmation: 'Password confirmation'
+      password_confirmation_hint: 'Confirm your password'

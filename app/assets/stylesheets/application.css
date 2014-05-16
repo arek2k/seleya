@@ -19,3 +19,7 @@
 .margin-top-2 {
 	margin-top: 60px;
 }
+
+.translation_missing {
+	background-color: #FC9D9D !important;
+}
