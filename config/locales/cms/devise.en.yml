@@ -1,7 +1,20 @@
-# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
 en:
+  formtastic:
+    hints:
+      password_confirmation: 'Password should be at least 8 chars long'
+    labels:
+      email: 'E-mail'
+      password: 'Password'
+      password_confirmation: 'Password confirmation'
+    placeholders:
+      email: 'Enter your email'
+      password: 'Enter your password'
+      password_confirmation: 'Confirm your password'
   devise:
+    titles:
+      sign_up: 'Sign up'
+      sign_in: 'Sign in'
     confirmations:
       confirmed: "Your account was successfully confirmed."
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
