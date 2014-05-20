@@ -1,0 +1,12 @@
+en:
+  cms:
+    menu:
+      pages_title: 'CMS Pages'
+      pages: 'Pages'
+      pages_list: 'List of pages'
+      page_add: 'Add page'
+
+    pages:
+      pages_list: 'List of pages'  
+      page_add: 'Add new page' 
+      page_edit: 'Edit page'

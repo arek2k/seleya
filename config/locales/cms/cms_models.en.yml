@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    models:
+      cms/page: 'Pages'
+    attributes:
+      cms/page:
+        name: 'Name'
+        

@@ -4,28 +4,28 @@
     p.id
   end
 
-  g.column name: 'Name', attribute: 'name' do |p|
+  g.column name: Cms::Page.human_attribute_name('name'), attribute: 'name' do |p|
     p.name[0..100]
   end
 
-  g.column name: 'Route', attribute: 'route' do |p| 
+  g.column name: t('cms.pages.grid.route'), attribute: 'route' do |p| 
     p.route[0..100]
   end
 
-  g.column name: 'Title', attribute: 'title' do |p| 
+  g.column name: t('cms.pages.grid.title'), attribute: 'title' do |p| 
     p.title[0..100]
   end
 
-  g.column name: 'Enabled ?' do |p| 
+  g.column name: t('cms.pages.grid.enabled') do |p| 
     p.enabled ? 'Yes' : 'No'
   end
 
-  g.column name: 'Static ?' do |p| 
+  g.column name: t('cms.pages.grid.static') do |p| 
     p.static ? 'Yes' : 'No'
   end
   
   g.column do |p| 
-    button_to 'Edit page', edit_cms_page_path(p), :class => 'btn btn-primary', :method => :get
+    button_to t('cms.pages.page_edit'), edit_cms_page_path(p), :class => 'btn btn-primary', :method => :get
   end
 
 end -%>

@@ -93,7 +93,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     mysql2 (0.3.16)
     orm_adapter (0.5.0)
     polyglot (0.3.4)

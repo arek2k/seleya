@@ -2,15 +2,18 @@
 en:
   formtastic:
     hints:
-      password_confirmation: 'Password should be at least 8 chars long'
+      cms/user:
+        password_confirmation: 'Password should be at least 8 chars long'
     labels:
-      email: 'E-mail'
-      password: 'Password'
-      password_confirmation: 'Password confirmation'
+      cms/user:
+        email: 'E-mail'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
     placeholders:
-      email: 'Enter your email'
-      password: 'Enter your password'
-      password_confirmation: 'Confirm your password'
+      cms/user:
+        email: 'Enter your email'
+        password: 'Enter your password'
+        password_confirmation: 'Confirm your password'
   devise:
     titles:
       sign_up: 'Sign up'
