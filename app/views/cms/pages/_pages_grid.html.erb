@@ -8,19 +8,19 @@
     p.name[0..100]
   end
 
-  g.column name: t('cms.pages.grid.route'), attribute: 'route' do |p| 
+  g.column name: Cms::Page.human_attribute_name('route'), attribute: 'route' do |p| 
     p.route[0..100]
   end
 
-  g.column name: t('cms.pages.grid.title'), attribute: 'title' do |p| 
+  g.column name: Cms::Page.human_attribute_name('title'), attribute: 'title' do |p| 
     p.title[0..100]
   end
 
-  g.column name: t('cms.pages.grid.enabled') do |p| 
+  g.column name: Cms::Page.human_attribute_name('enabled'), attribute: 'enabled' do |p| 
     p.enabled ? 'Yes' : 'No'
   end
 
-  g.column name: t('cms.pages.grid.static') do |p| 
+  g.column name: Cms::Page.human_attribute_name('static'), attribute: 'static' do |p| 
     p.static ? 'Yes' : 'No'
   end
   
