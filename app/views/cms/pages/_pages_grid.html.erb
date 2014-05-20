@@ -17,15 +17,21 @@
   end
 
   g.column name: Cms::Page.human_attribute_name('enabled'), attribute: 'enabled' do |p| 
-    p.enabled ? 'Yes' : 'No'
+    p.enabled ? t('cms.yes') : t('cms.no')
   end
 
   g.column name: Cms::Page.human_attribute_name('static'), attribute: 'static' do |p| 
-    p.static ? 'Yes' : 'No'
+    p.static ? t('cms.yes') : t('cms.no')
   end
   
   g.column do |p| 
-    button_to t('cms.pages.page_edit'), edit_cms_page_path(p), :class => 'btn btn-primary', :method => :get
+    page = button_to t('cms.pages.page_edit'), edit_cms_page_path(p), 
+      :class => 'btn btn-primary', :method => :get
+    #todo add if template add
+    template = button_to t('cms.pages.template_edit'), edit_cms_template_path(p), 
+      :class => 'btn btn-success', :method => :get
+    "#{page} #{template}".html_safe
   end
+
 
 end -%>

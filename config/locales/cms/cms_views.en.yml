@@ -1,12 +1,15 @@
 en:
   cms:
+    'yes': 'Yes'
+    'no': 'No'
     menu:
       pages_title: 'CMS Pages'
       pages: 'Pages'
       pages_list: 'List of pages'
       page_add: 'Add page'
-
     pages:
       pages_list: 'List of pages'  
       page_add: 'Add new page' 
       page_edit: 'Edit page'
+      template_edit: 'Edit template'
+      template_add: 'Add template'

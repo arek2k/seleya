@@ -5,7 +5,7 @@ en:
     attributes:
       cms/page:
         name: 'Name'
-        route: 'Routex'
+        route: 'Route'
         title: 'Title'
         enabled: 'Is enabled ?'
         static: 'Is static ?'

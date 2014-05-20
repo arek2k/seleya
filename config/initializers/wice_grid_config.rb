@@ -19,7 +19,7 @@ if defined?(Wice::Defaults)
   Wice::Defaults::CUSTOM_FILTER_ALL_LABEL = '--'
 
   # A list of classes for the table tag of the grid
-  Wice::Defaults::DEFAULT_TABLE_CLASSES = ['table', 'table-bordered', 'table-striped']
+  Wice::Defaults::DEFAULT_TABLE_CLASSES = ['table', 'table-bordered', 'table-hover', 'table-striped']
 
   # Allow switching between a single and multiple selection modes in custom filters (dropdown boxes)
   Wice::Defaults::ALLOW_MULTIPLE_SELECTION = true
@@ -41,7 +41,7 @@ if defined?(Wice::Defaults)
   Wice::Defaults::SHOW_FILTER = :always
 
   # A boolean value specifying if a change in a filter triggers reloading of the grid.
-  Wice::Defaults::AUTO_RELOAD = false
+  Wice::Defaults::AUTO_RELOAD = true
 
 
   # SQL operator used for matching strings in string filters.
