@@ -18,6 +18,15 @@ en:
     titles:
       sign_up: 'Sign up'
       sign_in: 'Sign in'
+      forgot_password: 'Forgot your password ?'
+      change_password: 'Change your password'
+      new_password: 'Enter new password'
+    links:
+      sign_up: 'Sign up'
+      sign_in: 'Sign in'
+      forgot_password: 'Forgot your password ?'
+      send_password_instructions: 'Send me reset passwords instructions'
+      change_password: 'Change your password'
     confirmations:
       confirmed: "Your account was successfully confirmed."
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
