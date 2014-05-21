@@ -18,11 +18,12 @@ module Cms::Renderer
     end
     page_layout.sub!(template_regexp, page_template)
 
-    parts = Hash.new
-    page.sections.each { |s| parts["section_#{s.id}"] = s.content }
-   
+    section = Hash.new
+    sections = { 'section' => section }
+    page.sections.each { |s| section[s.alias] = s.content }
+  
     render layout: 'cms_frontend', text: Liquid::Template
-      .parse(page_layout).render(parts)
+      .parse(page_layout).render(sections)
   end
 
 end

@@ -14,10 +14,9 @@ page = Cms::Page.create(
 
 Cms::Template.create(
   id: 1,  content: 'Template for test page,
-                    section 1: {{ section_1 }} <br />
-                    section 2: {{ section_2 }}',
+                    section 1: {{ section.first_section }} <br />
+                    section 2: {{ section.second_section }}',
   page_id: page.id)
 
-Cms::Section.create(
-  [{ id: 1, name: 'Section 1', content: '<b>Section 1</b>', page_id: page.id },
-   { id: 2, name: 'Section 2', content: '<b>Section 2</b>', page_id: page.id }])
+page.sections.create(id: 1, name: 'Section 1', alias: 'first_section', content: '<b>Section 1</b>')
+page.sections.create(id: 2, name: 'Section 2', alias: 'second_section', content: '<b>Section 2</b>')
