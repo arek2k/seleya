@@ -2,12 +2,12 @@ class Cms::TemplatesController < Cms::BaseController
 
   def new
     @template = Cms::Template.new
+    render text: params['format']
     @template.page_id = params[:page]
   end
 
   def create
     @template = Cms::Template.new(template_params)
-    # @template.page_id = current_user.id
     @template.save
     redirect_to cms_pages_path
   end

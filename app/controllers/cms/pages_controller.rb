@@ -12,7 +12,7 @@ class Cms::PagesController < Cms::BaseController
     @page = Cms::Page.new(page_params)
     @page.user_id = current_user.id
     @page.save
-    redirect_to new_cms_template_path(:page => @page.id)
+    redirect_to new_cms_template_path(@page.id)
   end
   
   def update

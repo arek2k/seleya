@@ -10,6 +10,7 @@
  *
  *= require bootflat
  *= require_self
+ *= require_tree
  */
 
 .margin-top-1 {
