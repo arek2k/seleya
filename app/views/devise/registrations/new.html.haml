@@ -1,7 +1,7 @@
 = render 'devise/shared/header'
 
 .col-md-6.col-md-offset-0.col-sm-8.col-sm-offset-2
-  .h2 
+  %h2 
     = t 'devise.titles.sign_up'
 
   = semantic_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|

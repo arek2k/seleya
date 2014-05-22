@@ -13,7 +13,6 @@ class Cms::TemplatesController < Cms::BaseController
   
   def update
     @template = Cms::Template.find(params[:id])
-    # @template.page_id =
     @template.update(template_params)
     redirect_to cms_pages_path
   end
@@ -23,7 +22,7 @@ class Cms::TemplatesController < Cms::BaseController
   end
   
   def edit
-    @template = Cms::Template.find(params[:id])
+    @template = Cms::Template.find(params[:id])   
   end
 
   private

@@ -1,0 +1,13 @@
+.row
+  .col-md-10.col-md-offset-1
+    %h3
+      = t 'cms.template.edit'
+    .row
+      .col-md-6.col-md-offset-3
+        = semantic_form_for(@template, :url => cms_template_path()) do |f|
+          - f.semantic_errors
+          = f.inputs :name => t('cms.template.title') do
+            = f.input :page, :member_label => :name, :as => :select, :hint => t('cms.template.page_hint')
+            = f.input :content
+          = f.actions do
+            = f.action :submit, :as => :button, :label => t('cms.template.save'), :button_html => { class: 'btn btn-primary' }

@@ -25,13 +25,13 @@
   end
   
   g.column do |p| 
-    page = button_to t('cms.pages.page_edit'), edit_cms_page_path(p), 
+    page = button_to t('cms.page.edit'), edit_cms_page_path(p), 
       :class => 'btn btn-primary', :method => :get
 
     template = (p.template.nil?) ?
-      (button_to t('cms.pages.template_add'), new_cms_template_path(), 
+      (button_to t('cms.page.template_add'), new_cms_template_path(), 
        :class => 'btn btn-info', :method => :get, :params => { :page => p.id }) :
-      (button_to t('cms.pages.template_edit'), edit_cms_template_path(p.template),
+      (button_to t('cms.page.template_edit'), edit_cms_template_path(p.template),
        :class => 'btn btn-success', :method => :get)
 
     "#{page} #{template}".html_safe

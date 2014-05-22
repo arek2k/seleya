@@ -7,9 +7,17 @@ en:
       pages: 'Pages'
       pages_list: 'List of pages'
       page_add: 'Add page'
-    pages:
-      pages_list: 'List of pages'  
-      page_add: 'Add new page' 
-      page_edit: 'Edit page'
+    page:
+      title: 'Page'
+      list: 'List of pages'  
+      add: 'Add new page' 
+      edit: 'Edit page'
+      save: 'Save [age'
       template_edit: 'Edit template'
       template_add: 'Add template'
+    template:
+      title: 'Template'
+      edit: 'Edit template'
+      add: 'Add new template'
+      save: 'Save template'
+      page_hint: 'You can reassign this template by selecting different page'
