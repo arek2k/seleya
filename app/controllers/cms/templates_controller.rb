@@ -2,7 +2,6 @@ class Cms::TemplatesController < Cms::BaseController
 
   def new
     @template = Cms::Template.new
-    render text: params['format']
     @template.page_id = params[:page]
   end
 

@@ -3,7 +3,7 @@
     %h3 Add new template
     .row
       .col-md-6.col-md-offset-3
-        = semantic_form_for(@template, :url => cms_pages_path) do |f|
+        = semantic_form_for(@template, :url => cms_templates_path) do |f|
           - f.semantic_errors
           = f.inputs :name => 'Template' do
             = f.input :page, :member_label => :name, :as => :select, :input_html => { :readonly => true }
