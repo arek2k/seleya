@@ -16,8 +16,7 @@ en:
       template_edit: 'Edit template'
       template_add: 'Add template'
     template:
-      title: 'Template'
+      title: 'Template for page "%{page}"'
       edit: 'Edit template'
       add: 'Add new template'
       save: 'Save template'
-      page_hint: 'You can reassign this template by selecting different page'

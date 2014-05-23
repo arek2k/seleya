@@ -2,7 +2,8 @@ class Cms::TemplatesController < Cms::BaseController
 
   def new
     @template = Cms::Template.new
-    @template.page_id = params[:page]
+    @page = Cms::Page.find(params[:page])
+    @template.page_id = @page.id
   end
 
   def create
