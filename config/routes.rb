@@ -4,8 +4,11 @@ Seleya::Application.routes.draw do
 
   namespace :cms do
     get '/' => 'index#index', :as => 'index'
-    resources :pages
+    resources :pages do
+      get 'sections' => 'pages#sections'
+    end
     resources :templates
+    resources :sections
   end
 
   root 'index#index'

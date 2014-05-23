@@ -24,6 +24,10 @@
     p.static ? t('cms.yes') : t('cms.no')
   end
   
+  g.column name: t('cms.page.sections_count') do |p| 
+    p.sections.count
+  end
+  
   g.column do |p| 
     page = button_to t('cms.page.edit'), edit_cms_page_path(p), 
       :class => 'btn btn-primary', :method => :get
@@ -34,7 +38,10 @@
       (button_to t('cms.page.template_edit'), edit_cms_template_path(p.template),
        :class => 'btn btn-success', :method => :get)
 
-    "#{page} #{template}".html_safe
+    sections = button_to t('cms.page.sections_edit'), cms_page_sections_path(p), 
+      :class => 'btn btn-warning', :method => :get unless p.sections.count == 0
+
+    "#{page} #{template} #{sections}".html_safe
   end
 
 

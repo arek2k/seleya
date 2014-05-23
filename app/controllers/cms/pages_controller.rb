@@ -30,6 +30,11 @@ class Cms::PagesController < Cms::BaseController
     @page = Cms::Page.find(params[:id])
   end
 
+  def sections
+    @sections = Cms::Page.find(params[:page_id]).sections
+    render text: @sections.inspect
+  end
+
   private
 
   def page_params
