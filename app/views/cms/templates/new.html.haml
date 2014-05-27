@@ -3,12 +3,14 @@
     %h3 
       = t 'cms.template.add'
     .row
-      .col-md-6.col-md-offset-3
-        = semantic_form_for(@template, :url => cms_templates_path) do |f|
+      .col-md-8.col-md-offset-2
+        = semantic_form_for(@template, :url => cms_templates_path()) do |f|
           - f.semantic_errors
           = f.inputs :name => t('cms.template.title', page: @page.name) do
             -# = f.input :page, :member_label => :name, :as => :select, :input_html => { :readonly => true }
             = f.input :page_id, :as => :hidden
-            = f.input :content
+            = f.input :content, :input_html => { id: 'template_content'}
+            #ace_content.well
           = f.actions do
-            = f.action :submit, :as => :button, :label => t('cms.template.save'), :button_html => { class: 'btn btn-primary' }
+            = f.action :submit, :as => :button, :label => t('cms.template.save'), 
+                :button_html => { id: 'ace_save', class: 'btn btn-primary' }

@@ -12,7 +12,7 @@ en:
       list: 'List of pages'  
       add: 'Add new page' 
       edit: 'Edit page'
-      save: 'Save [age'
+      save: 'Save page'
       template_edit: 'Edit template'
       template_add: 'Add template'
       sections_edit: 'Edit sections'
