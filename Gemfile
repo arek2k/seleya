@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -55,3 +56,4 @@ gem 'liquid', '~> 2.6.1'
 gem 'haml', '~> 4.0.5'
 gem 'wice_grid', '~> 3.4.3'
 gem 'jquery-turbolinks', '~> 2.0.2'
+gem 'rails-assets-ace-builds', '~> 1.1.3'

@@ -1,3 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+ editor = ace.edit('ace_content');
+ editor.setTheme('ace/theme/eclipse');
+ editor.getSession().setMode('ace/mode/twig');
+
+ $('#ace_save').click -> 
+   $('#template_content').val(editor.getSession().getValue());

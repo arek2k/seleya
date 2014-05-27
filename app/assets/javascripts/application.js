@@ -18,3 +18,5 @@
 //= require bootflat_icheck
 //= require bootstrap
 //= require wice_grid
+//= require ace-builds/src-noconflict/ace
+//= require_tree

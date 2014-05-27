@@ -9,6 +9,8 @@
           = f.inputs :name => t('cms.template.title', page: @template.page.name) do
             -# = f.input :page, :member_label => :name, :as => :select, :hint => t('cms.template.page_hint')
             = f.input :page_id, :as => :hidden
-            = f.input :content
-          = f.actions do
-            = f.action :submit, :as => :button, :label => t('cms.template.save'), :button_html => { class: 'btn btn-primary' }
+            = f.input :content, :as => :hidden, :input_html => { id: 'template_content'}
+            #ace_content.well
+              = @template.content              
+            = f.actions do
+              = f.action :submit, :as => :button, :label => t('cms.template.save'), :button_html => { id: 'ace_save', class: 'btn btn-primary' }
