@@ -7,7 +7,7 @@
         .tabbable.tabs-left.clearfix
           %ul#sections_tab.nav.nav-tabs
             - @sections.each_with_index do |section, i|
-              %li{ class: (i == 0) ? 'active' : ''}
+              %li{ class: (i == 0) ? 'active' : '' }
                 %a{ :href => '#' + section.alias, 'data-toggle' => 'tab' }
                   = section.name
           .tab-content
