@@ -9,4 +9,7 @@ en:
         title: 'Title'
         enabled: 'Is enabled ?'
         static: 'Is static ?'
+      cms/section:
+        name: 'Name'
+        alias: 'Alias'
         

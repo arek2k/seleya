@@ -17,6 +17,7 @@ en:
       template_add: 'Add template'
       sections_edit: 'Edit sections'
       sections_count: 'Sections'
+      sections_page: 'Page "%{page}" sections'
     template:
       title: 'Template for page "%{page}"'
       edit: 'Edit template'
