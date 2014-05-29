@@ -45,6 +45,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 # Additional Gems
+gem 'pg'
 gem 'mysql2', '~> 0.3.15'
 gem 'devise', '~> 3.2.4'
 gem 'cancancan', '~> 1.7.1'

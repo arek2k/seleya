@@ -22,10 +22,7 @@ test:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  database: seleya_prod
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  username: seleya
-  password: test123
-  socket: /var/run/mysqld/mysqld.sock
+  password: <%= ENV['SELEYA_DBPASS'] %>
