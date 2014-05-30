@@ -12,4 +12,5 @@ en:
       cms/section:
         name: 'Name'
         alias: 'Alias'
+        content: 'Content'
         

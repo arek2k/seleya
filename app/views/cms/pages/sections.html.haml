@@ -13,4 +13,5 @@
           .tab-content
             - @sections.each_with_index do |section, i|
               .tab-pane.fade{ id: section.alias, class: (i == 0) ? 'active in' : '' }
-                = section.content
+                .col-md-8
+                  = render 'cms/sections/edit_form', :section => section

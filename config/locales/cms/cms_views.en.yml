@@ -3,10 +3,16 @@ en:
     'yes': 'Yes'
     'no': 'No'
     menu:
+      users_title: 'CMS Users'
+      users: 'Users'
       pages_title: 'CMS Pages'
       pages: 'Pages'
       pages_list: 'List of pages'
       page_add: 'Add page'
+      sections_title: 'CMS Section'
+      sections: 'Sections'
+      sections_list: 'List of sections'
+      section_add: 'Add section'
     page:
       title: 'Page'
       list: 'List of pages'  
@@ -23,3 +29,7 @@ en:
       edit: 'Edit template'
       add: 'Add new template'
       save: 'Save template'
+    section:
+      title: 'Section'
+      save: 'Save section'
+      edit: 'Edit section'
