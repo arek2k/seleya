@@ -30,6 +30,6 @@ en:
       add: 'Add new template'
       save: 'Save template'
     section:
-      title: 'Section'
+      title: 'Section "%{name}"'
       save: 'Save section'
       edit: 'Edit section'

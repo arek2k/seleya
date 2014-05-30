@@ -51,6 +51,8 @@ GEM
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
+    bootstrap-wysihtml5-rails (0.3.1.24)
+      railties (>= 3.0)
     builder (3.2.2)
     cancancan (1.7.1)
     coffee-rails (4.0.1)
@@ -165,8 +167,9 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootflat-rails!
+  bootstrap-wysihtml5-rails (~> 0.3.1.24)
   cancancan (~> 1.7.1)
-  coffee-rails (~> 4.0.0)
+  coffee-rails (~> 4.0.1)
   devise (~> 3.2.4)
   formtastic (~> 2.3.0.rc3)
   formtastic-bootstrap (~> 3.0.0)

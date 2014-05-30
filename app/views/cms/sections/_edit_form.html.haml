@@ -1,10 +1,10 @@
 .row
-  = semantic_form_for(section, :url => cms_section_path(section)) do |f|
+  = semantic_form_for(section, :url => cms_section_path(section), :namespace => section.alias) do |f|
     - f.semantic_errors
-    = f.inputs :name => t('cms.section.title') do
+    = f.inputs :name => t('cms.section.title', :name => section.name) do
       = f.input :name
       = f.input :alias
-      = f.input :content
+      = f.input :content, :input_html => { :id => 'section_content' }
     = f.actions do
       = f.action :submit, :as => :button, :label => t('cms.section.save'),
         :button_html => { class: 'btn btn-primary' }

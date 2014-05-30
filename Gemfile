@@ -12,7 +12,7 @@ gem 'sass-rails', :git => 'https://github.com/zakelfassi/sass-rails'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.1'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -58,3 +58,4 @@ gem 'haml', '~> 4.0.5'
 gem 'wice_grid', '~> 3.4.3'
 gem 'jquery-turbolinks', '~> 2.0.2'
 gem 'rails-assets-ace-builds', '~> 1.1.3'
+gem 'bootstrap-wysihtml5-rails', '~> 0.3.1.24'
