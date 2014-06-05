@@ -55,6 +55,10 @@
         
 
       </ul>
+    
+      <p class="navbar-text navbar-right"><%= link_to ('<span class="glyphicon glyphicon-off"></span> <b>'.html_safe + t('cms.menu.logout')) + '</b>'.html_safe,
+        destroy_user_session_path, method: :delete, class: 'navbar-link' %>
+
     </div>
 
 

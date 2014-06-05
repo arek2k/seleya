@@ -13,6 +13,7 @@ en:
       sections: 'Sections'
       sections_list: 'List of sections'
       section_add: 'Add section'
+      logout: 'Logout'
     page:
       title: 'Page'
       list: 'List of pages'  
