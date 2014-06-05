@@ -3,7 +3,7 @@
     %h3
       = t 'cms.page.sections_page', page: @page.name
     .row
-      .panel
+      .panel#sections_container
         .tabbable.tabs-left.clearfix
           %ul#sections_tab.nav.nav-tabs
             - @sections.each_with_index do |section, i|

@@ -4,7 +4,7 @@
     = f.inputs :name => t('cms.section.title', :name => section.name) do
       = f.input :name
       = f.input :alias
-      = f.input :content, :input_html => { :id => 'section_content' }
+      = f.input :content, :input_html => { :class => 'section_content' }
     = f.actions do
       = f.action :submit, :as => :button, :label => t('cms.section.save'),
         :button_html => { class: 'btn btn-primary' }
