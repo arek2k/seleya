@@ -3,13 +3,13 @@
     %h3
       = t 'cms.page.add'
     .row
-      .col-md-6.col-md-offset-3
+      .col-md-6.col-md-offset-3#page_new
         = semantic_form_for(@page, :url => cms_pages_path) do |f|
           - f.semantic_errors
           = f.inputs :name => t('cms.page.title') do
-            = f.input :name
+            = f.input :name, :input_html => { id: 'page_name' }
             = f.input :layout, :member_label => :name, :as => :radio
-            = f.input :route
+            = f.input :route, :input_html => { id: 'page_route' }
             = f.input :title
             = f.input :keywords, :input_html => { rows: 2 }
             = f.input :description, :input_html => { rows: 3 }
