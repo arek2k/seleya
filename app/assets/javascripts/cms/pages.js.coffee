@@ -16,12 +16,16 @@ $ ->
 
   if action 'sections'
     $('.section_content').wysihtml5()
-    $('#section_save').click (e) ->
+    $('.section_save').click (e) ->
       e.preventDefault()
-      form = $('#section_save').closest('form')
+      form = $(this).closest('form')
+      tab = $(this).closest('.section-tab')
       $.ajax(
         type: 'PATCH'
         url: form.attr('action')
         data: form.serialize() + '&ajax'
-      ).done (status) ->
-          alert 'ok' if status
+      ).done (operation) ->
+        e = if operation.status then tab.find('.status.alert-success') \
+          else tab.find('.status.alert-danger')
+        e.fadeIn()
+        setTimeout (-> e.fadeOut()), 1500

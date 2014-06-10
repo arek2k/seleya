@@ -13,5 +13,7 @@
           .tab-content
             - @sections.each_with_index do |section, i|
               .tab-pane.fade{ id: section.alias, class: (i == 0) ? 'active in' : '' }
-                .col-md-8.col-md-offset-1
+                .col-md-8.col-md-offset-1.section-tab
+                  .status.alert.alert-success{style: 'display: none'}= t 'cms.page.section_save_success'
+                  .status.alert.alert-danger{style: 'display: none'}= t 'cms.page.section_save_failure'
                   = render 'cms/sections/edit_form', :section => section

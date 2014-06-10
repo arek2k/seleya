@@ -25,6 +25,8 @@ en:
       sections_edit: 'Edit sections'
       sections_count: 'Sections'
       sections_page: 'Page "%{page}" sections'
+      section_save_success: 'Changes has been saved'
+      section_save_failure: 'Error occured when saving changes !'
     template:
       title: 'Template for page "%{page}"'
       edit: 'Edit template'
