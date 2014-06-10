@@ -20,7 +20,7 @@ $ ->
       e.preventDefault()
       form = $('#section_save').closest('form')
       $.ajax(
-        type: 'PUT'
+        type: 'PATCH'
         url: form.attr('action')
         data: form.serialize() + '&ajax'
       ).done (status) ->

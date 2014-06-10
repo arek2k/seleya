@@ -18,7 +18,7 @@ class Cms::SectionsController < Cms::BaseController
     @section = Cms::Section.find(params[:id])
     status = @section.update(section_params)
     if params.has_key? :ajax
-      render json: status
+      render text: status
     else
       redirect_to cms_sections_path
     end
