@@ -9,9 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootflat
+ *= require bootstrap-wysihtml5/b3
  *= require_self
  */
 
-.margin-top {
+.margin-top-1 {
 	margin-top: 20px;
+}
+
+.margin-top-2 {
+	margin-top: 60px;
+}
+
+.translation_missing {
+	background-color: #FC9D9D !important;
 }

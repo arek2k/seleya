@@ -1,7 +1,7 @@
-class IndexController < ApplicationController
-      
-  def router
-    render :text => 'Router engine'
+class IndexController < Cms::DispatcherController
+
+  def index # Call dispatcher action
+    super
   end
 
 end

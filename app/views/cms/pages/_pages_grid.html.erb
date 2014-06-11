@@ -1,0 +1,48 @@
+<%= grid(@grid) do |g|
+
+  g.column name: 'ID' do |p| 
+    p.id
+  end
+
+  g.column name: Cms::Page.human_attribute_name('name'), attribute: 'name' do |p|
+    p.name[0..100]
+  end
+
+  g.column name: Cms::Page.human_attribute_name('route'), attribute: 'route' do |p| 
+    p.route[0..100]
+  end
+
+  g.column name: Cms::Page.human_attribute_name('title'), attribute: 'title' do |p| 
+    p.title[0..100]
+  end
+
+  g.column name: Cms::Page.human_attribute_name('enabled'), attribute: 'enabled' do |p| 
+    p.enabled ? t('cms.yes') : t('cms.no')
+  end
+
+  g.column name: Cms::Page.human_attribute_name('static'), attribute: 'static' do |p| 
+    p.static ? t('cms.yes') : t('cms.no')
+  end
+  
+  g.column name: t('cms.page.sections_count') do |p| 
+    p.sections.count
+  end
+  
+  g.column do |p| 
+    page = button_to t('cms.page.edit'), edit_cms_page_path(p), 
+      :class => 'btn btn-primary', :method => :get
+
+    template = (p.template.nil?) ?
+      (button_to t('cms.page.template_add'), new_cms_template_path(), 
+       :class => 'btn btn-info', :method => :get, :params => { :page => p.id }) :
+      (button_to t('cms.page.template_edit'), edit_cms_template_path(p.template),
+       :class => 'btn btn-success', :method => :get)
+
+    sections = button_to t('cms.page.sections_edit'), cms_page_sections_path(p), 
+      :class => 'btn btn-warning', :method => :get unless p.sections.count == 0
+
+    "#{page} #{template} #{sections}".html_safe
+  end
+
+
+end -%>

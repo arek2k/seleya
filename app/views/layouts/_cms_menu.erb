@@ -1,0 +1,66 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+
+    <div class="navbar-header col-md-3">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--  <img class="img-responsive" src="logo" style="margin-top: 10px; float: left; margin-right: 10px;" alt="logo" />   -->
+      <%= link_to Rails.application.config.system_name, { controller: 'index', action: 'index' }, class: 'navbar-brand' %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        
+        <!-- users dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-file"></span> <b><%= t 'cms.menu.users' %> </b> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header"><%= t 'cms.menu.users_title'%></li>
+            <!--  <li class="divider"></li>  -->
+          </ul>
+        </li>
+        <!-- / users dropdown -->
+
+        <!-- pages dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-file"></span> <b><%= t 'cms.menu.pages' %> </b> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header"><%= t 'cms.menu.pages_title'%></li>
+            <li><%= link_to ('<span class="glyphicon glyphicon-list"></span> '.html_safe + t('cms.menu.pages_list')), cms_pages_path %></li>
+            <li><%= link_to ('<span class="glyphicon glyphicon-plus"></span> '.html_safe + t('cms.menu.page_add')), new_cms_page_path %></li>
+            <!--  <li class="divider"></li>  -->
+          </ul>
+        </li>
+        <!-- / pages dropdown -->
+        
+        <!-- sections dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-file"></span> <b><%= t 'cms.menu.sections' %> </b> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header"><%= t 'cms.menu.sections_title'%></li>
+            <li><%= link_to ('<span class="glyphicon glyphicon-list"></span> '.html_safe + t('cms.menu.sections_list')), cms_sections_path %></li>
+            <li><%= link_to ('<span class="glyphicon glyphicon-plus"></span> '.html_safe + t('cms.menu.section_add')), new_cms_section_path %></li>
+            <!--  <li class="divider"></li>  -->
+          </ul>
+        </li>
+        <!-- / sections dropdown -->
+        
+
+      </ul>
+    
+      <p class="navbar-text navbar-right"><%= link_to ('<span class="glyphicon glyphicon-off"></span> <b>'.html_safe + t('cms.menu.logout')) + '</b>'.html_safe,
+        destroy_user_session_path, method: :delete, class: 'navbar-link' %>
+
+    </div>
+
+
+  </div>
+</nav>

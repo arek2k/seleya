@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      cms/page: 'Pages'
+    attributes:
+      cms/page:
+        name: 'Name'
+        route: 'Route'
+        title: 'Title'
+        enabled: 'Is enabled ?'
+        static: 'Is static ?'
+      cms/section:
+        name: 'Name'
+        alias: 'Alias'
+        content: 'Content'
+        

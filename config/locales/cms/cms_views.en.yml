@@ -1,0 +1,38 @@
+en:
+  cms:
+    'yes': 'Yes'
+    'no': 'No'
+    menu:
+      users_title: 'CMS Users'
+      users: 'Users'
+      pages_title: 'CMS Pages'
+      pages: 'Pages'
+      pages_list: 'List of pages'
+      page_add: 'Add page'
+      sections_title: 'CMS Section'
+      sections: 'Sections'
+      sections_list: 'List of sections'
+      section_add: 'Add section'
+      logout: 'Logout'
+    page:
+      title: 'Page'
+      list: 'List of pages'  
+      add: 'Add new page' 
+      edit: 'Edit page'
+      save: 'Save page'
+      template_edit: 'Edit template'
+      template_add: 'Add template'
+      sections_edit: 'Edit sections'
+      sections_count: 'Sections'
+      sections_page: 'Page "%{page}" sections'
+      section_save_success: 'Changes has been saved'
+      section_save_failure: 'Error occured when saving changes !'
+    template:
+      title: 'Template for page "%{page}"'
+      edit: 'Edit template'
+      add: 'Add new template'
+      save: 'Save template'
+    section:
+      title: 'Section "%{name}"'
+      save: 'Save section'
+      edit: 'Edit section'

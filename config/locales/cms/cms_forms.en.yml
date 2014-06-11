@@ -1,0 +1,8 @@
+en:
+  formtastic:
+    hints:
+      cms/page:
+    labels:
+      cms/page:
+    placeholders:
+      cms/page:
